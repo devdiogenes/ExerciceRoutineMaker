@@ -1,7 +1,6 @@
 <script setup>
-    import Cell from './Row/Cell.vue'
-
     import { computed } from 'vue'
+    import Cell from './Row/Cell.vue'
 
     const props = defineProps({
         "main": {
@@ -70,7 +69,7 @@
 </script>
 <template>
     <div :tabindex="values['numero']"
-    class="w-full flex h-10 sm:h-8 items-center justify-center sm:justify-between" 
+    class="select-none focus:border-[1px] transition-all border-gray w-full flex h-10 sm:h-8 items-center justify-center sm:justify-between" 
     :class="computed_classes"
     @focusin="emit_event('focusin')"
     @focusout="emit_event('focusout')"
@@ -82,5 +81,21 @@
             <div v-if="key != 'exercicio'" class="w-[1px] h-4 bg-green" :class="hide_on_mobile(key)" />
         </template>
     </div>
-    <div v-if="!main && is_focused" :id="`row_${values['numero']}`">test</div>
+    <div v-if="!main && is_focused" 
+    :id="`row_${values['numero']}`"
+    class="row_options transition-all w-full flex justify-center items-center bg-gray text-white"
+    >
+        <span class="cursor-pointer">Editar  |  Excluir</span>
+    </div>
 </template>
+<style scoped>
+    @keyframes row_options_animation {
+        from {height: 0;}
+        to {height: 40px;}
+    }
+    .row_options {
+        height: 40px;
+        animation-name: row_options_animation;
+        animation-duration: .3s;
+    }
+</style>
