@@ -1,6 +1,7 @@
 <script setup>
     import { computed } from 'vue'
     import Cell from './Row/Cell.vue'
+    import ActionButton from '/src/components/_common/ActionButton.vue'
 
     const props = defineProps({
         "main": {
@@ -24,7 +25,7 @@
         }
     })
 
-    const emit = defineEmits(['focusin', 'focusout']);
+    const emit = defineEmits(['focusin', 'focusout', 'show_window']);
 
     const sizes = {
         "numero": "small",
@@ -61,6 +62,7 @@
     };
 
     function emit_event(event) {
+        console.log(event)
         if (!props.main) {
             emit(event);
         }
@@ -68,24 +70,32 @@
 
 </script>
 <template>
-    <div :tabindex="values['numero']"
-    class="select-none focus:border-[1px] transition-all border-gray w-full flex h-10 sm:h-8 items-center justify-center sm:justify-between" 
-    :class="computed_classes"
-    @focusin="emit_event('focusin')"
-    @focusout="emit_event('focusout')"
+    <div class="focus:border-[1px] border-green "
+    @focusin="emit_event('focusin')" 
+    @focusout="emit_event('focusout')" 
+    :tabindex="values['numero']"
     >
-        <template v-for="([key, value], index) in Object.entries(values)">
-            <Cell :size="sizes[key]" :class="cell_classes(key)">
-                {{ value }}
-            </Cell>
-            <div v-if="key != 'exercicio'" class="w-[1px] h-4 bg-green" :class="hide_on_mobile(key)" />
-        </template>
-    </div>
-    <div v-if="!main && is_focused" 
-    :id="`row_${values['numero']}`"
-    class="row_options transition-all w-full flex justify-center items-center bg-gray text-white"
-    >
-        <span class="cursor-pointer">Editar  |  Excluir</span>
+        <div
+        class="select-none transition-all w-full flex h-10 sm:h-8 items-center justify-center sm:justify-between" 
+        :class="computed_classes"
+        >
+            <template v-for="([key, value], index) in Object.entries(values)">
+                <Cell :size="sizes[key]" :class="cell_classes(key)">
+                    {{ value }}
+                </Cell>
+                <div v-if="key != 'exercicio'" class="w-[1px] h-4 bg-green" :class="hide_on_mobile(key)" />
+            </template>
+        </div>
+        <div v-if="!main && is_focused" 
+        :id="`row_${values['numero']}`"
+        class="row_options transition-all w-full flex justify-center items-center bg-gray text-white"
+        >
+            <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/>
+            <span class="cursor-pointer" @click="emit('show_window', 'edit_row')">Editar</span>
+            <span> | </span>
+            <span class="cursor-pointer">Excluir</span>
+            <ActionButton icon="arrow-down" size="small" class="ml-2" :grow_in_hover="false"/>
+        </div>
     </div>
 </template>
 <style scoped>
