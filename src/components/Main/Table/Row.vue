@@ -92,7 +92,7 @@
         >
             <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/>
             <span class="cursor-pointer" @click="emit('show_window', 'edit_row')">Editar</span>
-            <span> | </span>
+            <span class="mx-2">|</span>
             <span class="cursor-pointer">Excluir</span>
             <ActionButton icon="arrow-down" size="small" class="ml-2" :grow_in_hover="false"/>
         </div>
