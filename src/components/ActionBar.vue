@@ -17,7 +17,7 @@
     <div class="w-screen bottom-0 left-0 fixed">
         <div class="m-5 flex justify-between items-end">
             <div class="flex sm:h-12 sm:items-end flex-col sm:flex-row">
-                <ActionButton title="Trocar treino" 
+                <ActionButton title="Trocar Treino" 
                 icon="repeat-outline" 
                 size="large" 
                 class="action_bar_hidden_button hidden sm:flex m-1"
@@ -29,12 +29,12 @@
                 class="action_bar_hidden_button hidden sm:flex m-1"
                 @click="emit('show_window', 'settings')"
                 />
-                <ActionButton title="Baixar treino" 
+                <ActionButton title="Baixar Treino" 
                 icon="cloud-download-outline" 
                 size="large" 
                 class="action_bar_hidden_button hidden sm:flex m-1"
                 />
-                <ActionButton title="Enviar treino" 
+                <ActionButton title="Enviar Treino" 
                 icon="cloud-upload-outline" 
                 size="large" 
                 class="action_bar_hidden_button hidden sm:flex m-1"

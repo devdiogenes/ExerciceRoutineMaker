@@ -1,9 +1,13 @@
 <script setup>
     import { ref } from 'vue';
     import Row from './Table/Row.vue';
+    import ActionButton from '/src/components/_common/ActionButton.vue';
+    import ExerciceRoutine from '/src/services/ExerciceRoutine.js';
 
-    const props = defineProps(['data']);
     const emit = defineEmits(['show_window'])
+
+    const routine = new ExerciceRoutine();
+    const data = ref(routine.get_routine());
 
     const focused_row = ref(null);
     function toggle_focused_row(numero = null) {
@@ -23,6 +27,14 @@
         @focusin="toggle_focused_row(row['numero'])"
         @focusout="toggle_focused_row()"
         @show_window="emit_show_window"
+        />
+    </div>
+    <div class="flex justify-center">
+        <ActionButton title="Adicionar Exercício" 
+        icon="add" 
+        size="large" 
+        class="action_bar_hidden_button m-1"
+        @click="emit('show_window', 'edit_row')"
         />
     </div>
 </template>
