@@ -33,7 +33,7 @@
         <ActionButton title="Adicionar Exercício" 
         icon="add" 
         size="large" 
-        class="action_bar_hidden_button m-1"
+        class="m-1"
         @click="emit('show_window', 'edit_row')"
         />
     </div>
