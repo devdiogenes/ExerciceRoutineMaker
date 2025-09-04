@@ -1,37 +1,37 @@
 [
     {
-        "series": 3,
-        "qtd": 60,
-        "formato": "seg",
-        "descanso": 30,
+        "sets": 3,
+        "qty": 60,
+        "type": "Segundos",
+        "rest": 30,
         "exercicio": "Aquecimento Cardio"
     },
     {
-        "series": 4,
-        "qtd": 12,
-        "formato": "rep",
-        "descanso": 60,
+        "sets": 4,
+        "qty": 12,
+        "type": "Repetições",
+        "rest": 60,
         "exercicio": "Supino Reto"
     },
     {
-        "series": 3,
-        "qtd": 15,
-        "formato": "rep",
-        "descanso": 45,
+        "sets": 3,
+        "qty": 15,
+        "type": "Repetições",
+        "rest": 45,
         "exercicio": "Agachamento Livre"
     },
     {
-        "series": 4,
-        "qtd": 10,
-        "formato": "rep",
-        "descanso": 60,
+        "sets": 4,
+        "qty": 10,
+        "type": "Repetições",
+        "rest": 60,
         "exercicio": "Remada Curvada"
     },
     {
-        "series": 3,
-        "qtd": 20,
-        "formato": "seg",
-        "descanso": 30,
+        "sets": 3,
+        "qty": 20,
+        "type": "Repetições",
+        "rest": 30,
         "exercicio": "Prancha Abdominal"
     }
 ]

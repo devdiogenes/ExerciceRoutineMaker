@@ -29,10 +29,10 @@
 
     const sizes = {
         "numero": "small",
-        "series": "small",
-        "qtd": "small",
-        "formato": "small",
-        "descanso": "small",
+        "sets": "small",
+        "qty": "small",
+        "type": "small",
+        "rest": "small",
         "exercicio": "large",
     };
 
@@ -49,7 +49,7 @@
 
     function hide_on_mobile(field) {
         let classes = "";
-        if (["series", "qtd", "formato", "descanso"].includes(field)) {
+        if (["sets", "qty", "type", "rest"].includes(field)) {
             return "hidden sm:block";
         }
         return "";
