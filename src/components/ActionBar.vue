@@ -17,6 +17,7 @@
     <div class="w-screen bottom-0 left-0 fixed">
         <div class="m-5 flex justify-between items-end">
             <div class="flex sm:h-12 sm:items-end flex-col sm:flex-row">
+                <!-- TODO
                 <ActionButton title="Trocar Treino" 
                 icon="repeat-outline" 
                 size="large" 
@@ -42,8 +43,9 @@
                 <ActionButton icon="ellipsis-horizontal" 
                 size="large" 
                 @click="show_hide_buttons" 
-                class="flex sm:hidden m-1"
+                class="flex sm:hidden m-1" 
                 />
+                -->
             </div>
             <div 
             class="flex items-center bg-white py-2 pl-6 pr-3 rounded-full shadow-md cursor-pointer

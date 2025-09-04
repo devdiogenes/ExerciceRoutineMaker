@@ -11,7 +11,7 @@
 </script>
 <template>
     <main class="py-10 font-bold">
-        <Info />
+        <!-- <Info /> -->
         <Table @show_window="emit_show_window" />
         <div class="h-10 w-full" />
     </main>
