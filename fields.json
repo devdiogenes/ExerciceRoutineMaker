@@ -1,0 +1,27 @@
+[
+    {
+        "name": "sets",
+        "label": "Séries",
+        "type": "number"
+    },
+    {
+        "name": "qty",
+        "label": "Quantidade",
+        "type": "number"
+    },
+    {
+        "name": "type",
+        "label": "Tipo",
+        "type": "number"
+    },
+    {
+        "name": "rest",
+        "label": "Descanso",
+        "type": "number"
+    },
+    {
+        "name": "exercicio",
+        "label": "Exercício",
+        "type": "text"
+    }
+]

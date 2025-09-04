@@ -2,20 +2,17 @@
     import { computed } from 'vue'
     import Cell from './Row/Cell.vue'
     import ActionButton from '/src/components/_common/ActionButton.vue'
-
+    import fields from '/fields.json'
+    
     const props = defineProps({
         "main": {
             "default": false
         },
         "values": {
-            "default": {
-                "numero": "Nº",
-                "series": "Series",
-                "qtd": "QTD",
-                "formato": "Formato",
-                "descanso": "Descanso",
-                "exercicio": "Exercício",
-            }
+            "default": Object.fromEntries([
+                ["numero", "Nº"],
+                ...fields.map(item => [item.name, item.label])
+            ]),
         },
         "row_number": {
             "default": 0
