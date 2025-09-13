@@ -59,7 +59,6 @@
     };
 
     function emit_event(event) {
-        console.log(event)
         if (!props.main) {
             emit(event);
         }
