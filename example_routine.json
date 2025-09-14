@@ -1,37 +1,37 @@
 [
     {
+        "exercice": "Aquecimento Cardio",
         "sets": 3,
         "qty": 60,
         "type": "Segundos",
-        "rest": 30,
-        "exercicio": "Aquecimento Cardio"
+        "rest": 30
     },
     {
+        "exercice": "Supino Reto",
         "sets": 4,
         "qty": 12,
         "type": "Repetições",
-        "rest": 60,
-        "exercicio": "Supino Reto"
+        "rest": 60
     },
     {
+        "exercice": "Agachamento Livre",
         "sets": 3,
         "qty": 15,
         "type": "Repetições",
-        "rest": 45,
-        "exercicio": "Agachamento Livre"
+        "rest": 45
     },
     {
+        "exercice": "Remada Curvada",
         "sets": 4,
         "qty": 10,
         "type": "Repetições",
-        "rest": 60,
-        "exercicio": "Remada Curvada"
+        "rest": 60
     },
     {
+        "exercice": "Prancha Abdominal",
         "sets": 3,
         "qty": 20,
         "type": "Repetições",
-        "rest": 30,
-        "exercicio": "Prancha Abdominal"
+        "rest": 30
     }
 ]

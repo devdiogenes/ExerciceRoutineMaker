@@ -1,5 +1,10 @@
 [
     {
+        "name": "exercice",
+        "label": "Exercício",
+        "type": "text"
+    },
+    {
         "name": "sets",
         "label": "Séries",
         "type": "number"
@@ -12,16 +17,11 @@
     {
         "name": "type",
         "label": "Tipo",
-        "type": "number"
+        "type": "text"
     },
     {
         "name": "rest",
         "label": "Descanso",
         "type": "number"
-    },
-    {
-        "name": "exercicio",
-        "label": "Exercício",
-        "type": "text"
     }
 ]
