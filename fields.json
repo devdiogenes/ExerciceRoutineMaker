@@ -17,7 +17,8 @@
     {
         "name": "type",
         "label": "Tipo",
-        "type": "text"
+        "type": "select",
+        "options": ["Segundos", "Repetições"]
     },
     {
         "name": "rest",

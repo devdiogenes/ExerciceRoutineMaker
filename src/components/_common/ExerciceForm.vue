@@ -34,12 +34,25 @@
         <form class="flex flex-col m-2" @submit.prevent="save_changes">
             <div v-for="field in fields" class="flex flex-col my-2">
                 <label for="sets">{{ field.label }}:</label>
-                <input 
-                v-model="form_values[field.name]"
-                :type="field.type"
-                :id="`field-${field.name}`"
-                :name="field.name"
-                />
+                <template v-if="['text', 'number'].includes(field.type)">
+                    <input 
+                    v-model="form_values[field.name]"
+                    :type="field.type"
+                    :id="`field-${field.name}`"
+                    :name="field.name"
+                    class="bg-white p-1"
+                    />
+                </template>
+                <template v-else-if="field.type == 'select'">
+                    <select 
+                    v-model="form_values[field.name]"
+                    :id="`field-${field.name}`"
+                    :name="field.name"
+                    class="bg-white p-1"
+                    >
+                        <option v-for="option in field.options" :value="option">{{ option }}</option>
+                    </select>
+                </template>
             </div>
             <div class="w-full flex justify-center items-center mt-4">
                 <input type="submit" value="Salvar" class="bg-green px-5 py-1 text-white rounded-full" />
