@@ -18,11 +18,9 @@
                         <div class="float-right" style="margin: -20px -20px 0 0">
                             <ActionButton title="Trocar Treino" icon="close" size="large" @click="emit('close')"/>
                         </div>
-                        <div class="m-4">
+                        <div class="mx-5 my-7">
                             <h1 class="font-semibold text-xl text-center">{{ title }}</h1>
-                            <form>
-                                <slot />
-                            </form>
+                            <slot />
                         </div>
                     </div>                
                 </div>

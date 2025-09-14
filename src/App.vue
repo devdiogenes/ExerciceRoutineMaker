@@ -6,17 +6,23 @@
 	import ActionWindows from './components/ActionWindows.vue';
 
 	const current_window = ref('');
+	const current_row_number = ref(null);
 
-	function show_window(form) {
+	function show_window(form, row_number = null) {
 		current_window.value = form;
+		current_row_number.value = row_number;
 	}
 	function hide_window(){
-		current_window.value = '';
+		current_window.value = null;
 	}
 </script>
 
 <template>
-	<ActionWindows :current="current_window" @close="hide_window"/>
+	<ActionWindows 
+	:current="current_window"
+	:current_row_number="current_row_number"
+	@close="hide_window"
+	/>
 	<div class="font-roboto">
 		<div class="w-screen h-screen bg-silver py-3 px-3 sm:py-6 sm:px-12 lg:px-16">
 			<Header />

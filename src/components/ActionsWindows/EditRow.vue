@@ -1,8 +1,14 @@
 <script setup>
-    import Window from '/src/components/_common/Window.vue';
+    import ExerciceForm from '/src/components/_common/ExerciceForm.vue';
 
     const emit = defineEmits(['close'])
+
+    const props = defineProps({
+        "row_number": {
+            "default": null,
+        }
+    })
 </script>
 <template>
-    <Window @close="emit('close')">Edit Row Window</Window>
+    <ExerciceForm @close="emit('close')" :row_number="props.row_number" title="Editar Exercício" />
 </template>

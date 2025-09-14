@@ -30,7 +30,7 @@
         "qty": "small",
         "type": "small",
         "rest": "small",
-        "exercicio": "large",
+        "exercice": "large",
     };
 
     const computed_classes = computed(() => {
@@ -66,31 +66,31 @@
 
 </script>
 <template>
-    <div class="focus:border-[1px] border-green "
+    <div class="focus:border-[1px] border-green"
     @focusin="emit_event('focusin')" 
     @focusout="emit_event('focusout')" 
     :tabindex="values['numero']"
     >
         <div
-        class="select-none transition-all w-full flex h-10 sm:h-8 items-center justify-center sm:justify-between" 
+        class="select-none transition-all w-full flex h-10 sm:h-8 items-center justify-center sm:justify-evenly" 
         :class="computed_classes"
         >
-            <template v-for="([key, value], index) in Object.entries(values)">
+            <template v-for="([key, value], index) in Object.entries(values)" :key="index">
                 <Cell :size="sizes[key]" :class="cell_classes(key)">
                     {{ value }}
                 </Cell>
-                <div v-if="key != 'exercicio'" class="w-[1px] h-4 bg-green" :class="hide_on_mobile(key)" />
+                <div v-if="index < Object.keys(values).length - 1" class="w-[1px] h-4 bg-green" :class="hide_on_mobile(key)" />
             </template>
         </div>
         <div v-if="!main && is_focused" 
         :id="`row_${values['numero']}`"
         class="row_options transition-all w-full flex justify-center items-center bg-gray text-white"
         >
-            <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/>
-            <span class="cursor-pointer" @click="emit('show_window', 'edit_row')">Editar</span>
+            <!-- <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/> -->
+            <span class="cursor-pointer" @click="emit('show_window', 'edit_row', row_number)">Editar</span>
             <span class="mx-2">|</span>
             <span class="cursor-pointer">Excluir</span>
-            <ActionButton icon="arrow-down" size="small" class="ml-2" :grow_in_hover="false"/>
+            <!-- <ActionButton icon="arrow-down" size="small" class="ml-2" :grow_in_hover="false"/> -->
         </div>
     </div>
 </template>

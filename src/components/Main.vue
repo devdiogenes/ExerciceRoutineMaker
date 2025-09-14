@@ -5,8 +5,8 @@
 
     const emit = defineEmits(['show_window'])
 
-    function emit_show_window(window){
-        emit('show_window', window);
+    function emit_show_window(window, row_number = null) {
+        emit('show_window', window, row_number);
     }
 </script>
 <template>

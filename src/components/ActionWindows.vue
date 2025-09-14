@@ -6,7 +6,10 @@
 
     const props = defineProps({
         current: {
-            default: ""
+            default: "",
+        },
+        current_row_number: {
+            default: null,
         }
     })
 
@@ -17,5 +20,5 @@
     <Settings v-if="current == 'settings'" @close="emit('close')"/>
     <ChangeRoutine v-if="current == 'change_routine'" @close="emit('close')"/>
     <Play v-if="current == 'play'" @close="emit('close')"/>
-    <EditRow v-if="current == 'edit_row'" @close="emit('close')"/>
+    <EditRow v-if="current == 'edit_row'" @close="emit('close')" :row_number="current_row_number"/>
 </template>
