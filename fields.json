@@ -7,22 +7,26 @@
     {
         "name": "sets",
         "label": "Séries",
-        "type": "number"
+        "type": "number",
+        "default": 3
     },
     {
         "name": "qty",
         "label": "Quantidade",
-        "type": "number"
+        "type": "number",
+        "default": 10
     },
     {
         "name": "type",
         "label": "Tipo",
         "type": "select",
-        "options": ["Segundos", "Repetições"]
+        "options": ["Segundos", "Repetições"],
+        "default": "Repetições"
     },
     {
         "name": "rest",
         "label": "Descanso",
-        "type": "number"
+        "type": "number",
+        "default": 60
     }
 ]
