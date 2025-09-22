@@ -21,7 +21,7 @@
         }
     })
 
-    const emit = defineEmits(['focusin', 'focusout', 'show_window']);
+    const emit = defineEmits(['focusin', 'focusout', 'show_window', 'delete_row']);
 
     const sizes = {
         "numero": "small",
@@ -88,7 +88,7 @@
             <!-- <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/> -->
             <span class="cursor-pointer" @click="emit('show_window', 'edit_row', row_number)">Editar</span>
             <span class="mx-2">|</span>
-            <span class="cursor-pointer">Excluir</span>
+            <span class="cursor-pointer" @click="emit('delete_row', row_number)">Excluir</span>
             <!-- <ActionButton icon="arrow-down" size="small" class="ml-2" :grow_in_hover="false"/> -->
         </div>
     </div>

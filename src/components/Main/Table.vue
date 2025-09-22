@@ -40,6 +40,7 @@
         @focusin="toggle_focused_row(row['numero'])"
         @focusout="toggle_focused_row()"
         @show_window="emit_show_window"
+        @delete_row="routine.delete_exercice(index)"
         />
     </div>
     <div class="flex justify-center">

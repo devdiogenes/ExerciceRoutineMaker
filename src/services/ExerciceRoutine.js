@@ -29,4 +29,8 @@ export default class ExerciceRoutine {
         }
         this.save_routine();
     }
+    delete_exercice(row_number) {
+        this.#routine.splice(row_number, 1);
+        this.save_routine();
+    }
 }
