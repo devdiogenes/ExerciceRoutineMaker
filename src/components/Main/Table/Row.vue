@@ -1,7 +1,6 @@
 <script setup>
     import { computed } from 'vue'
     import Cell from './Row/Cell.vue'
-    import ActionButton from '/src/components/_common/ActionButton.vue'
     import fields from '/fields.json'
     
     const props = defineProps({

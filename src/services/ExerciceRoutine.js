@@ -21,8 +21,12 @@ export default class ExerciceRoutine {
         localStorage.setItem('routine', JSON.stringify(this.#routine));
         window.dispatchEvent(new Event('routine-updated'));
     }
-    update_exercice(row_number, exercice) {
-        this.#routine[row_number] = exercice;
+    update_exercice(exercice, row_number = null) {
+        if (row_number == null) {
+            this.#routine.push(exercice);
+        } else {
+            this.#routine[row_number] = exercice;
+        }
         this.save_routine();
     }
 }

@@ -24,13 +24,13 @@
     }
 
     function save_changes() {
-        routine.update_exercice(props.row_number, form_values.value);
+        routine.update_exercice(form_values.value, props.row_number);
         emit('close');
     }
 
 </script>
 <template>
-    <Window @close="emit('close')" title="Editar Exercício">
+    <Window @close="emit('close')" :title="row_number ? 'Editar Exercício' : 'Novo Exercício'">
         <form class="flex flex-col m-2" @submit.prevent="save_changes">
             <div v-for="field in fields" class="flex flex-col my-2">
                 <label for="sets">{{ field.label }}:</label>

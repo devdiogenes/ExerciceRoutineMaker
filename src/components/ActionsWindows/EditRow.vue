@@ -10,5 +10,5 @@
     })
 </script>
 <template>
-    <ExerciceForm @close="emit('close')" :row_number="props.row_number" title="Editar Exercício" />
+    <ExerciceForm @close="emit('close')" :row_number="props.row_number" />
 </template>
