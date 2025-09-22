@@ -41,6 +41,7 @@
                     :id="`field-${field.name}`"
                     :name="field.name"
                     class="bg-white p-1"
+                    required
                     />
                 </template>
                 <template v-else-if="field.type == 'select'">
@@ -49,6 +50,7 @@
                     :id="`field-${field.name}`"
                     :name="field.name"
                     class="bg-white p-1"
+                    required
                     >
                         <option v-for="option in field.options" :value="option">{{ option }}</option>
                     </select>
