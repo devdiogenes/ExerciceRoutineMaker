@@ -83,12 +83,12 @@
         </div>
         <div v-if="!main && is_focused" 
         :id="`row_${values['numero']}`"
-        class="row_options transition-all w-full flex justify-center items-center bg-gray text-white"
+        class="row_options transition-all w-full flex justify-center items-center bg-gray text-white select-none"
         >
             <!-- <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/> -->
-            <span class="cursor-pointer" @click="emit('show_window', 'edit_row', row_number)">Editar</span>
+            <span class="cursor-pointer hover:font-bold" @click="emit('show_window', 'edit_row', row_number)">Editar</span>
             <span class="mx-2">|</span>
-            <span class="cursor-pointer" @click="emit('delete_row', row_number)">Excluir</span>
+            <span class="cursor-pointer hover:font-bold" @click="emit('delete_row', row_number)">Excluir</span>
             <!-- <ActionButton icon="arrow-down" size="small" class="ml-2" :grow_in_hover="false"/> -->
         </div>
     </div>
