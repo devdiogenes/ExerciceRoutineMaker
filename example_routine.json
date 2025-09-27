@@ -30,8 +30,8 @@
     {
         "exercice": "Prancha Abdominal",
         "sets": 3,
-        "qty": 20,
-        "type": "Repetições",
-        "rest": 30
+        "qty": 40,
+        "type": "Segundos",
+        "rest": 60
     }
 ]
