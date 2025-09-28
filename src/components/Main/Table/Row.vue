@@ -9,7 +9,7 @@
         },
         "values": {
             "default": Object.fromEntries([
-                ["numero", "Nº"],
+                ["number", "Nº"],
                 ...fields.map(item => [item.name, item.label])
             ]),
         },
@@ -24,7 +24,7 @@
     const emit = defineEmits(['focusin', 'focusout', 'show_window', 'delete_row']);
 
     const sizes = {
-        "numero": "small",
+        "number": "small",
         "sets": "small",
         "qty": "small",
         "type": "small",
@@ -36,7 +36,7 @@
         if (props.main) {
             return 'font-bold text-white bg-green';
         }
-        if (props.values.numero % 2 == 0){
+        if (props.values.number % 2 == 0){
             return 'cursor-pointer bg-white';
         } else {
             return 'cursor-pointer bg-silver';
@@ -53,7 +53,7 @@
 
     function cell_classes(field) {
         let classes = "";
-        //classes = (field == "numero") ? "text-center" : "text-center";
+        //classes = (field == "number") ? "text-center" : "text-center";
         return `${classes} ${hide_on_mobile(field)}`;
     };
 
@@ -68,7 +68,7 @@
     <div class="focus:border-[1px] border-green"
     @focusin="emit_event('focusin')" 
     @focusout="emit_event('focusout')" 
-    :tabindex="values['numero']"
+    :tabindex="values['number']"
     >
         <div
         class="select-none transition-all w-full flex h-10 sm:h-8 items-center justify-center sm:justify-evenly" 
@@ -82,7 +82,7 @@
             </template>
         </div>
         <div v-if="!main && is_focused" 
-        :id="`row_${values['numero']}`"
+        :id="`row_${values['number']}`"
         class="row_options transition-all w-full flex justify-center items-center bg-gray text-white select-none"
         >
             <!-- <ActionButton icon="arrow-up" size="small" class="mr-2" :grow_in_hover="false"/> -->

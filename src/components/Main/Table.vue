@@ -10,8 +10,8 @@
     const data = ref(routine.get_routine());
 
     const focused_row = ref(null);
-    function toggle_focused_row(numero = null) {
-        focused_row.value = numero;
+    function toggle_focused_row(number = null) {
+        focused_row.value = number;
     }
 
     function emit_show_window(window, row_number = null) {
@@ -35,9 +35,9 @@
         <Row :main="true" />
         <Row v-for="row, index in data" :key="index"
         :values="row" 
-        :is_focused="focused_row === row['numero']"
+        :is_focused="focused_row === row['number']"
         :row_number="index"
-        @focusin="toggle_focused_row(row['numero'])"
+        @focusin="toggle_focused_row(row['number'])"
         @focusout="toggle_focused_row()"
         @show_window="emit_show_window"
         @delete_row="routine.delete_exercice(index)"

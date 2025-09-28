@@ -12,7 +12,7 @@
 <template>
     <div class="font-roboto bg-black/90 fixed z-10">
         <div class="w-screen h-screen flex items-center justify-center">
-            <div class="max-w-96 w-screen">
+            <div class="w-96">
                 <div class="mx-8 bg-silver flex flex-col rounded-lg">
                     <div class="">
                         <div class="float-right" style="margin: -20px -20px 0 0">

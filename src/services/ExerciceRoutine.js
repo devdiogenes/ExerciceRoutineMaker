@@ -13,7 +13,7 @@ export default class ExerciceRoutine {
         this.load_routine();
         let routine = [];
         this.#routine.forEach((exercice, index) => {
-            routine.push(Object.assign({'numero': index+1}, exercice));
+            routine.push(Object.assign({'number': index+1}, exercice));
         })
         return routine;
     }

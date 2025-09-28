@@ -47,13 +47,12 @@
                 />
                 -->
             </div>
-            <div 
+            <div
+            @click="emit('show_window', 'play')"
             class="flex items-center bg-white py-2 pl-6 pr-3 rounded-full shadow-md cursor-pointer
             hover:pl-5 hover:pr-4 transition-all"
             >
-                <span class="select-none mr-1 font-bold text-lg tracking-wide"
-                @click="emit('show_window', 'play')"
-                >
+                <span class="select-none mr-1 font-bold text-lg tracking-wide"                >
                     TREINAR
                 </span>
                 <ActionButton icon="play" size="medium" class="ml-1" :grow_in_hover="false"/>
